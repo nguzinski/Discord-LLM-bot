@@ -359,30 +359,10 @@ async def clear_history(ctx):
     global history, self_conv_history_1, self_conv_history_2
     
         # Reset main history
-    # Per-channel conversation memory - Regular conversations
-    #
-    #"role": "system", "content": "Your system prompt you want saved into memory of the model"
-    #
-    #EXAMPLE: "role": "system", "content": "You are a Nick, always act like Nick, not an AI or assistant"  #if your training data was parsed for someone named Nick for example
-    #
-    #
+    
+    self_conv_history_1 = Conv1Start
 
-
-    # Self-conversation memory stores
-    #
-    ##EXAMPLE: "role": "system", "content": "You are a Nick, always act like Nick, not an AI or assistant"
-    #
-    #This is a system for two seperate memory stores, to allow a bot to talk and converse with itself
-    #
-    #These two prompts can be the same or different, its all up to your purposes and your training data
-
-    self_conv_history_1 = [{
-        "PUT ABOVE HERE"
-    }]
-
-    self_conv_history_2 = [{
-        "PUT ABOVE HERE or Put another Prompt"
-    }]
+    self_conv_history_2 = Conv2Start
 
         
     await ctx.send("cleared all my memories for this channel! fresh start 🧠✨")
